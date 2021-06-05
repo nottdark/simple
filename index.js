@@ -12,9 +12,7 @@ app.get('/', (req, res) => {
 
 app.get('/greet', (req, res) => {
   res.send({ 
-    text: hello(),
-    name: req.query.name,
-    age: req.query.age
+    text: hello()
   })
 })
 
