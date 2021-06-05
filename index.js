@@ -1,10 +1,17 @@
 const express = require('express')
 const app = express()
 const port = process.env.PORT || 3003
+const { hello } = require('./helpers/index')
 
 app.get('/', (req, res) => {
   res.send({ 
-    status: trues
+    status: true
+  })
+})
+
+app.get('/hello', (req, res) => {
+  res.send({ 
+    msg: hello()
   })
 })
 
