@@ -3,6 +3,7 @@ const app = express()
 const port = process.env.PORT || 3003
 
 const { hello } = require('./utils')
+const { toDate } = require('./utils/datetime')
 
 app.get('/', (req, res) => {
   res.send({ 
@@ -14,6 +15,12 @@ app.get('/greet', (req, res) => {
   res.send({ 
     text: hello(),
     fname: req.query.fname,
+  })
+})
+
+app.get('/today', (req, res) => {
+  res.send({ 
+    text: toDate()
   })
 })
 
