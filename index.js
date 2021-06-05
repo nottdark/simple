@@ -3,7 +3,6 @@ const app = express()
 const port = process.env.PORT || 3003
 
 const { hello } = require('./utils')
-const { today, getTomorrow } = require('./utils/datetime')
 
 app.get('/', (req, res) => {
   res.send({ 
@@ -15,18 +14,6 @@ app.get('/greet', (req, res) => {
   res.send({ 
     text: hello(),
     fname: req.query.fname,
-  })
-})
-
-app.get('/today', (req, res) => {
-  res.send({ 
-    text: today()
-  })
-})
-
-app.get('/tomorrow', (req, res) => {
-  res.send({ 
-    text: getTomorrow()
   })
 })
 
