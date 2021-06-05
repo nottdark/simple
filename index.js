@@ -14,6 +14,7 @@ app.get('/greet', (req, res) => {
   res.send({ 
     text: hello(),
     fname: req.query.fname,
+    lname: req.query.lname,
   })
 })
 
