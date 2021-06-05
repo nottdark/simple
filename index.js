@@ -4,7 +4,7 @@ const port = process.env.PORT || 3003
 
 app.get('/', (req, res) => {
   res.send({ 
-    status: true
+    status: trues
   })
 })
 
