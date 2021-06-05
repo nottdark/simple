@@ -12,7 +12,8 @@ app.get('/', (req, res) => {
 
 app.get('/greet', (req, res) => {
   res.send({ 
-    text: hello()
+    text: hello(),
+    name: req.query.name
   })
 })
 
